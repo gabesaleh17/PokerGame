@@ -22,6 +22,6 @@ int main(int argc, const char * argv[])
    std::cout << "(" << newDeck.m_deck[0].getSuit() << "," << newDeck.m_deck[0].getValue() << ")" << std::endl;
     //std::cout << "(" << newDeck.m_deck[1].getSuit() << "," << newDeck.m_deck[1].getValue() << ")" << std::endl;
     
-    std::cout << "hello world";
+
     
 }
