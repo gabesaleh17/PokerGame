@@ -10,20 +10,18 @@
 #define Deck_h
 
 #include "Card.h"
+#include <deque>
 
 
 class Deck : public Card
 {
-private:
-    
-public:
+
+ public:
+    std::deque<Card> m_deck;
     Deck();
     void shuffle();
-    int getDeckSize();
-    Card m_deck[52];
-    int m_deckSize = 0;
-    void showCard(int index);
     void swapCards(Card& card1, Card& card2);
+    Card dealCard();
     
 };
 

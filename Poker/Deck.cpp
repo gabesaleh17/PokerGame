@@ -17,12 +17,14 @@ Deck::Deck()
     {
         for(int j = 0; j < 14; j++)
         {
-            m_deck[j+(13*i)].setSuit(static_cast<SuitType>(i));
-            m_deck[j+(13*i)].setValue(static_cast<ValueType>(j));
+            Card newCard;
+            newCard.setSuit(static_cast<SuitType>(i));
+            newCard.setValue(static_cast<ValueType>(j));
+            m_deck.push_back(newCard);
             
             
         }
-        m_deckSize++;
+        
     }
     
 }
@@ -33,11 +35,6 @@ void Deck::swapCards(Card& card1, Card& card2)
     tempCard = card1;
     card1 = card2;
     card2 = tempCard;
-    
-}
-
-void Deck::showCard(int index)
-{
     
 }
 
@@ -54,4 +51,12 @@ void Deck::shuffle()
     }
     
     
+}
+
+Card Deck::dealCard()
+{
+    Card topCard;
+    topCard = m_deck[0];
+    m_deck.pop_front();
+    return topCard;
 }

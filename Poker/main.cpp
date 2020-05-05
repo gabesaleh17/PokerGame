@@ -8,18 +8,19 @@
 
 #include "Card.h"
 #include "Deck.h"
+#include "Player.h"
 
 int main(int argc, const char * argv[])
 {
     
     Deck newDeck;
     
-    std::cout << "(" << newDeck.m_deck[0].getSuit() << "," << newDeck.m_deck[0].getValue() << ")" << std::endl;
+    newDeck.m_deck[0].showCard();
     //std::cout << "(" << newDeck.m_deck[1].getSuit() << "," << newDeck.m_deck[1].getValue() << ")" << std::endl;
-    newDeck.shuffle();
+    //newDeck.shuffle();
     //newDeck.swapCards(newDeck.m_deck[0], newDeck.m_deck[1]);
     
-   std::cout << "(" << newDeck.m_deck[0].getSuit() << "," << newDeck.m_deck[0].getValue() << ")" << std::endl;
+   //std::cout << "(" << newDeck.m_deck[0].getSuit() << "," << newDeck.m_deck[0].getValue() << ")" << std::endl;
     //std::cout << "(" << newDeck.m_deck[1].getSuit() << "," << newDeck.m_deck[1].getValue() << ")" << std::endl;
     
 
