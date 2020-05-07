@@ -24,16 +24,12 @@ void Table::StartGame()
         Player newPlayer("Player" +std::to_string(i),500);
         playerList.insert(newPlayer);
         
-        if( i == 1)playerList.head->player.type =  dealer;
-        else if( i == 2)playerList.head->player.type = smallBlind;
-        else if( i == 3)playerList.head->player.type = bigBlind;
-        else playerList.head->player.type = regular;
+        if( i == 1)playerList.head->player.badge =  dealer;
+        else if( i == 2)playerList.head->player.badge = smallBlind;
+        else if( i == 3)playerList.head->player.badge = bigBlind;
+        else playerList.head->player.badge = regular;
         
     }
 
 }
 
-void Table::StartRound(){
-    
-    
-}

@@ -11,14 +11,7 @@
 #include "Card.h"
 #include <deque>
 
-struct playerID
-{
-    bool regular;
-    bool bigBlind;
-    bool smallBlind;
-    bool dealer;
-    
-};
+enum playerBadge{dealer,smallBlind,bigBlind,regular};
 
 
 class Player: public Card
@@ -28,9 +21,9 @@ class Player: public Card
     std::string playerName;
     std::deque<Card> hand;
     int chips;
-    struct playerID id;
     bool playerFold;
     int currentBet;
+    enum playerBadge badge;
     
     Player(std::string name, int money);
     void Bet(int wager);
