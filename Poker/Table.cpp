@@ -34,10 +34,44 @@ void Table::StartGame()
 
 void Table::StartRound()
 {
-    
-        playerList.head->player.badge =  dealer;
-        playerList.head->next->player.badge = smallBlind;
-        playerList.head->player.badge = regular;
+    setUpBadges();
     
 }
 
+void Table::setUpBadges(){
+    
+    if(isFirstRound == true){
+        
+        isFirstRound = false;
+        
+        playerList.head->player.badge = dealer;
+        playerList.head = playerList.head->next;
+        playerList.head->player.badge = smallBlind;
+        playerList.head = playerList.head->next;
+        playerList.head->player.badge = bigBlind;
+        playerList.head = playerList.head->next;
+       
+        while(playerList.head->player.badge != dealer){
+            
+            playerList.head->player.badge = regular;
+            playerList.head = playerList.head->next;
+        }
+    
+    }
+    
+    else{
+        
+        while(playerList.head->player.badge != dealer){
+                   playerList.head = playerList.head->next;
+        }
+        
+        playerList.head->player.badge = regular;
+        playerList.head = playerList.head->next;
+        playerList.head->player.badge = dealer;
+        playerList.head = playerList.head->next;
+        playerList.head->player.badge = smallBlind;
+        playerList.head = playerList.head->next;
+        playerList.head->player.badge = bigBlind;
+        
+    }
+}

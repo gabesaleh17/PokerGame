@@ -21,6 +21,7 @@ class Table: public Player
     CLL playerList;
     void StartGame();
     void StartRound();
+    void setUpBadges();
     bool isFirstRound = true;
 };
 
