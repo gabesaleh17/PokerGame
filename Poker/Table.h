@@ -20,6 +20,8 @@ class Table: public Player
     Table();
     CLL playerList;
     void StartGame();
+    void StartRound();
+    bool isFirstRound = true;
 };
 
 #endif /* Table_h */

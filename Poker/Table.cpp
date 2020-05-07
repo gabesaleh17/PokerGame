@@ -19,17 +19,25 @@ void Table::StartGame()
     Deck deckOfCards;
     deckOfCards.shuffle();
     
-    for(int i = 5; i >0; i--){
+    for(int i = 1; i <= 5; i++)
+    {
        
         Player newPlayer("Player" +std::to_string(i),500);
         playerList.insert(newPlayer);
+        playerList.head = playerList.head->next;
         
-        if( i == 1)playerList.head->player.badge =  dealer;
-        else if( i == 2)playerList.head->player.badge = smallBlind;
-        else if( i == 3)playerList.head->player.badge = bigBlind;
-        else playerList.head->player.badge = regular;
+        
         
     }
+   //std::cout << playerList.head->player.playerName << std::endl;
+}
 
+void Table::StartRound()
+{
+    
+        playerList.head->player.badge =  dealer;
+        playerList.head->next->player.badge = smallBlind;
+        playerList.head->player.badge = regular;
+    
 }
 
