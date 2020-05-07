@@ -9,12 +9,17 @@
 #ifndef Table_h
 #define Table_h
 #include "Player.h"
+#include "Deck.h"
+#include "CLL.h"
+
 #include <deque>
 
 class Table: public Player
 {
   public:
-    
+    Table();
+    CLL playerList;
+    void StartGame();
 };
 
 #endif /* Table_h */

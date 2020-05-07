@@ -10,6 +10,12 @@
 #include <iostream>
 #include <deque>
 
+Player::Player()
+{
+    
+}
+
+
 Player::Player(std::string name, int money)
 {
     playerName = name;

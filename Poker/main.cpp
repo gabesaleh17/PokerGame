@@ -9,13 +9,13 @@
 #include "Card.h"
 #include "Deck.h"
 #include "Player.h"
+#include "Table.h"
 
 int main(int argc, const char * argv[])
 {
     
-    Deck newDeck;
-    
-    newDeck.m_deck[0].showCard();
+    Table newTable;
+    newTable.StartGame();
     //std::cout << "(" << newDeck.m_deck[1].getSuit() << "," << newDeck.m_deck[1].getValue() << ")" << std::endl;
     //newDeck.shuffle();
     //newDeck.swapCards(newDeck.m_deck[0], newDeck.m_deck[1]);

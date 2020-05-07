@@ -24,6 +24,7 @@ struct playerID
 class Player: public Card
 {
   public:
+    Player();
     std::string playerName;
     std::deque<Card> hand;
     int chips;
