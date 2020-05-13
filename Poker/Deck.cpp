@@ -22,7 +22,6 @@ Deck::Deck()
             newCard.setValue(static_cast<ValueType>(j));
             m_deck.push_back(newCard);
             
-            
         }
         
     }

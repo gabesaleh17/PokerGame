@@ -19,10 +19,23 @@ class Table: public Player
   public:
     Table();
     CLL playerList;
-    void StartGame();
+    Deck deckOfCards;
+    std::deque<Card> communityCards;
+    int pot;
+    int currentRaise;
+    int numOfPlayers;
+    int smallBlindAmt = 5;
+    int bigBlindAmt = 10;
+    void DealtoPlayersAndBlinds();
+    void showCommunityCards();
+    void StartGame(int numPlayers, int startingChips);
     void StartRound();
     void setUpBadges();
     bool isFirstRound = true;
+    void playerTurn();
+    void showHand();
+    bool allMove = false;
 };
 
 #endif /* Table_h */
+

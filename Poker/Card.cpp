@@ -79,5 +79,6 @@ void Card::showCard()
                 break;
     }
     
-    std::cout << outputString << std::endl;
+    std::cout << outputString;
 }
+

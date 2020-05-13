@@ -10,6 +10,7 @@
 #include <iostream>
 #include <deque>
 
+
 Player::Player()
 {
     
@@ -20,14 +21,14 @@ Player::Player(std::string name, int money)
 {
     playerName = name;
     chips = money;
-    currentBet = 0;
+    totalBetAmtRound = 0;
     playerFold = false;
     
 }
 
 void Player::Bet(int wager)
 {
-    currentBet += wager;
+    totalBetAmtRound += wager;
     
     if((chips - wager) != 0)
     {
@@ -48,3 +49,4 @@ void Player::Fold()
 {
     playerFold = true;
 }
+

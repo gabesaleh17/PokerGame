@@ -13,15 +13,16 @@
 
 int main(int argc, const char * argv[])
 {
-    
+    int numOfPlayers;
+    int startingChips;
     Table newTable;
-    newTable.StartGame();
-    //std::cout << "(" << newDeck.m_deck[1].getSuit() << "," << newDeck.m_deck[1].getValue() << ")" << std::endl;
-    //newDeck.shuffle();
-    //newDeck.swapCards(newDeck.m_deck[0], newDeck.m_deck[1]);
+    std::cout << "enter number of players between 2-11" << std::endl;
+    std::cin >> numOfPlayers;
+    std::cout << "enter number of starting chips" << std::endl;
+    std::cin >> startingChips;
+    newTable.StartGame(numOfPlayers,startingChips);
+    newTable.StartRound();
     
-   //std::cout << "(" << newDeck.m_deck[0].getSuit() << "," << newDeck.m_deck[0].getValue() << ")" << std::endl;
-    //std::cout << "(" << newDeck.m_deck[1].getSuit() << "," << newDeck.m_deck[1].getValue() << ")" << std::endl;
     
 
     

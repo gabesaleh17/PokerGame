@@ -30,7 +30,7 @@ public:
     void setValue(ValueType value);
     
     void showCard();
-    
+    void showHand(Card &card1, Card &card2);
     
 private:
     SuitType m_suit;

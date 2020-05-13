@@ -21,8 +21,8 @@ class Player: public Card
     std::string playerName;
     std::deque<Card> hand;
     int chips;
-    bool playerFold;
-    int currentBet;
+    bool playerFold = false;
+    int totalBetAmtRound;
     enum playerBadge badge;
     
     Player(std::string name, int money);
